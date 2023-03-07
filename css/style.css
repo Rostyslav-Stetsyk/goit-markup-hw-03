@@ -26,15 +26,32 @@ rgba(46, 47, 66, 0.7) - Hero background
     --accent-color: #E7E9FC;
 }
 
-* {
+/* * {
     outline: 1px tomato solid;
-}
+} */
 
 body {
     color: var(--body-text-color);
     background-color: var(--white-color);
     font-family: Roboto, sans-serif;
     font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1158px;
+    padding: 0px 15px;
 }
 
 .text {
@@ -46,6 +63,8 @@ body {
 
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .link {
@@ -82,6 +101,23 @@ body {
     letter-spacing: 0.02em;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.no-gap {
+    display: block;
+}
+
 .card-title,
 .list-title {
     color: var(--dark-color);
@@ -100,6 +136,12 @@ body {
 
 .header {
     background-color: var(--white-color);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.header>.container {
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .part-logo-header {
@@ -117,6 +159,10 @@ body {
 .nav.link:hover,
 .nav.link:focus {
     color: var(--pressed-state-color);
+}
+
+.contacts {
+    font-style: inherit;
 }
 
 .contact {
@@ -143,12 +189,18 @@ body {
     background-color: var(--dark-color);
 }
 
+.footer>.container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .part-logo-footer {
     color: var(--light-mode-color);
 }
 
 .footer .text {
     color: var(--accent-color);
+    width: 264px;
 }
 
 /* Main page style (index.html) */
@@ -158,18 +210,26 @@ body {
     background-color: var(--dark-color);
 }
 
+.hero>.container {
+    text-align: center;
+}
+
 .hero .section-title {
     color: var(--white-color);
 
     font-size: 56px;
     line-height: 1.07;
-    text-align: center;
     letter-spacing: 0.02em;
 }
 
 .hero .btn {
     color: var(--white-color);
     background-color: var(--primary-brand-color);
+
+    margin-top: 48px;
+    padding: 16px 32px;
+    border-color: transparent;
+    border-radius: 4px;
 }
 
 .hero .btn:hover,
@@ -178,11 +238,14 @@ body {
     background-color: var(--pressed-state-color);
 }
 
-/* Titles: "Section1: Featuress" and "Section2: Example" and "Section3: Team"  */
+/* Section1: Featuress */
 
-.featuress .section-title {
-    display: none;
+.featuress .text {
+    margin-top: 8px;
 }
+
+/* Section2: Example */
+
 
 /* Section3: Team */
 
@@ -190,9 +253,17 @@ body {
     background-color: var(--light-mode-color);
 }
 
-.team-cards .card-title,
+.team .card-content {
+    padding: 32px 16px;
+}
+
+.team-cards .card-title {
+    text-align: center;
+}
+
 .team-cards .desc {
     text-align: center;
+    margin-top: 8px;
 }
 
 .team-cards .card {
@@ -201,8 +272,16 @@ body {
 
 /* Portfolio page style */
 
-.portfolio .section-title {
-    display: none;
+.portfolio .card-content {
+    padding: 32px 0;
+}
+
+.portfolio .desc {
+    margin-top: 8px;
+}
+
+.portfolio .card {
+    border: 1px solid var(--accent-color);
 }
 
 /* Buttons */
@@ -210,10 +289,14 @@ body {
 .filter-btns .btn {
     color: var(--primary-brand-color);
     background-color: var(--light-mode-color);
+    border-radius: 4px;
+    border: 1px solid var(--accent-color);
+    padding: 12px 24px;
 }
 
 .filter-btns .btn:hover,
 .filter-btns .btn:focus {
     color: var(--white-color);
     background-color: var(--pressed-state-color);
+    border-color: transparent;
 }
