@@ -91,6 +91,10 @@ img {
     line-height: 1.33;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .btn {
@@ -144,13 +148,29 @@ img {
 .header {
     background-color: var(--white-color);
     border-bottom: 1px solid var(--accent-color);
+}
 
-    padding-top: 24px;
-    padding-bottom: 24px;
+.header>.container {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
 }
 
 .part-logo-header {
     color: var(--dark-color);
+}
+
+.header-list {
+    display: flex;
+    margin-left: 76px;
+}
+
+.header-list>.item:not(:first-child) {
+    margin-left: 40px;
 }
 
 .nav.link {
@@ -159,11 +179,31 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .nav.link:hover,
 .nav.link:focus {
     color: var(--pressed-state-color);
+}
+
+.address-container {
+    margin-left: auto;
+}
+
+.contacts-list {
+    display: flex;
+}
+
+.contacts-list>.item:not(:first-child) {
+    margin-left: 40px;
+}
+
+.contact>.link {
+    display: block;
 }
 
 .contact {
