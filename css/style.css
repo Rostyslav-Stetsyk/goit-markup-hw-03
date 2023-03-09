@@ -395,7 +395,6 @@ img {
     flex-wrap: wrap;
     row-gap: 48px;
     column-gap: 24px;
-
     margin-top: 72px;
 }
 
@@ -409,4 +408,6 @@ img {
     margin-top: 8px;
 }
 
-.portfolio .card {}
+.portfolio .card {
+    width: 360px;
+}
